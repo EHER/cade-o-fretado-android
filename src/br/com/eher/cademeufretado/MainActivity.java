@@ -17,11 +17,11 @@ public class MainActivity extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		case R.id.action_start_service:
-			locationServiceStart();
+		case R.id.action_start_location_service:
+			startLocationService();
 			return true;
-		case R.id.action_stop_service:
-			locationServiceStop();
+		case R.id.action_stop_location_service:
+			stopLocationService();
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
@@ -32,13 +32,14 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		startLocationService();
 	}
 
-	private void locationServiceStart() {
+	private void startLocationService() {
 		startService(new Intent(this, LocationService.class));
 	}
 
-	private void locationServiceStop() {
+	private void stopLocationService() {
 		stopService(new Intent(this, LocationService.class));
 	}
 }

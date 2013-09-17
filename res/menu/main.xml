@@ -1,14 +1,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:id="@+id/action_start_service"
+        android:id="@+id/action_start_location_service"
         android:orderInCategory="100"
         android:showAsAction="never"
-        android:title="@string/action_start_service"/>
+        android:title="@string/action_start_location_service"/>
     <item
-        android:id="@+id/action_stop_service"
+        android:id="@+id/action_stop_location_service"
         android:orderInCategory="100"
         android:showAsAction="never"
-        android:title="@string/action_stop_service"/>
+        android:title="@string/action_stop_location_service"/>
 
 </menu>

@@ -4,7 +4,7 @@
     <string name="app_name">Cade meu Fretado</string>
     <string name="action_settings">Configurações</string>
     <string name="running">Sua localização está sendo monitorada por GPS</string>
-    <string name="action_start_service">Iniciar Serviço</string>
-    <string name="action_stop_service">Parar Serviço</string>
+    <string name="action_start_location_service">Iniciar Serviço</string>
+    <string name="action_stop_location_service">Parar Serviço</string>
 
 </resources>
