@@ -52,7 +52,6 @@ public class MyLocationListener implements LocationListener {
 	}
 
 	private void postLocation(Location location) {
-		// Create a new HttpClient and Post Header
 		HttpClient httpclient = new DefaultHttpClient();
 		HttpPost httpPost = new HttpPost(LOCATION_ENDPOINT_URL);
 
@@ -66,7 +65,8 @@ public class MyLocationListener implements LocationListener {
 			httpPost.setEntity(new UrlEncodedFormEntity(pairs));
 			httpclient.execute(httpPost);
 		} catch (ClientProtocolException e) {
-			Toast.makeText(context, "ClientProtocolException",
+			Toast.makeText(context,
+					"ClientProtocolException: " + e.getMessage(),
 					Toast.LENGTH_SHORT).show();
 			e.printStackTrace();
 		} catch (IOException e) {

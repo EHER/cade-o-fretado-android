@@ -17,11 +17,11 @@ public class LocationService extends Service {
 	}
 
 	public void onDestroy() {
-		Toast.makeText(this, "service stopping", Toast.LENGTH_SHORT).show();
+		Toast.makeText(this, "stopping location service", Toast.LENGTH_SHORT).show();
 	}
 
 	public void onCreate() {
-		Toast.makeText(this, "service starting", Toast.LENGTH_SHORT).show();
+		Toast.makeText(this, "starting location service", Toast.LENGTH_SHORT).show();
 		startMyLocationListener();
 	}
 

@@ -26,7 +26,9 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".LocationService" >
+        <service
+            android:name=".LocationService"
+            android:enabled="true" >
         </service>
     </application>
 

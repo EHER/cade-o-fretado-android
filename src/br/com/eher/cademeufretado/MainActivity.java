@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 
 public class MainActivity extends Activity {
 
@@ -14,15 +15,30 @@ public class MainActivity extends Activity {
 	}
 
 	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.action_start_service:
+			locationServiceStart();
+			return true;
+		case R.id.action_stop_service:
+			locationServiceStop();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
+
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
-		locationServiceStart();
 	}
 
 	private void locationServiceStart() {
-		Intent intent = new Intent(this, LocationService.class);
-		startService(intent);
+		startService(new Intent(this, LocationService.class));
+	}
+
+	private void locationServiceStop() {
+		stopService(new Intent(this, LocationService.class));
 	}
 }
